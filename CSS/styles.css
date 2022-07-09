@@ -2,7 +2,6 @@ body {
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.03em;
-    font-style: normal;
 
     color: var(--text-general-black);
     background-color:  var(--background-general-white);
@@ -16,6 +15,9 @@ body {
     --button-nonactive-grey: #F5F4FA;
     --logo-title-black: #000000;
     --background-footer-black: #2F303A;
+    --line-header-white:#ECECEC;
+    --text-blacktheme-white:#FFFFFF99;
+    --hero-btn-blue:#188CE8;
 }
 
 .list {
@@ -45,7 +47,7 @@ body {
 .btn {
     background-color: var(--button-nonactive-grey);
     color: var(--text-general-black);
-    border: 1px;
+    border: none;
 }
 
 .btn:hover,
@@ -53,6 +55,20 @@ body {
     background-color: var(--button-active-blue);
     color: var(--background-general-white);
     cursor: pointer;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /*навігація сайту*/
@@ -79,6 +95,10 @@ body {
     color: var(--button-active-blue)
 }
 
+.header-nav .current {
+    color: var(--button-active-blue);
+}
+
 /*секція баннеру hero*/
 .hero {
     background-color: var(--background-footer-black);
@@ -91,18 +111,27 @@ body {
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-/*потім буде #fff*/
-    color: var(--logo-title-black);
+    color: var(--background-general-white);
 }
 
-.hero .btn {
+.hero-btn {
     width: 200px;
     height: 50px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    cursor: pointer;  
+    letter-spacing: 0.06em;
 
     color: var(--background-general-white);
     background-color:var(--button-active-blue);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+    background: var(--hero-btn-blue);
 }
 
 /*заголовки сайту*/
@@ -116,10 +145,10 @@ body {
 }
 
 .subtitle {
-    
     font-weight: 700;
     line-height: 1.14;
-   
+    font-size: 14px;
+
     text-transform: uppercase;
 
     color: var(--text-general-black);
@@ -142,6 +171,7 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
+    text-transform: capitalize;
 /*потім буде text-align:center*/
 
     color: var(--text-general-black)
@@ -167,6 +197,10 @@ body {
 }
 
 /*навігація в футері*/
+.main-footer-adress{
+font-style: normal;
+}
+
 .footer-adress .link{
     font-weight: 400;
     font-size: 14px;
@@ -183,7 +217,7 @@ body {
 }
 
 .footer-contact-item {
-    color: var(--text-subtitle-grey);
+    color: var(--text-blacktheme-white);
 }
 
 /****портфоліо****/
@@ -191,6 +225,7 @@ body {
 /*Секція зразків сайту*/
 
 .section-samples-filters .btn{
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
